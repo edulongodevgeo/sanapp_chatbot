@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+     <head>
+          <!-- Required meta tags -->
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+          <!-- Title tag -->
+          <title>SANAPP+</title>
+
+          
+          <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+          <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+          <!-- Font awesome -->
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+          <!-- Animate.css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+          <!-- Normalize -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+
+          <!-- Custom CSS -->
+          <link href="css/styles.css" rel="stylesheet">
+
+          <style>
+               /* If you wish to remove the astonish.js file, then also be sure to remove these styles. */
+               .astonish {
+                    visibility: visible;
+               }
+
+               @media (min-width: 768px) {
+                    .astonish {
+                         visibility: hidden;
+                    }
+                    .animated {
+                         visibility: visible;
+                    }
+               }
+
+               #map {
+                    height: 82vh;
+                    z-index: 1;
+                }
+                
+          </style>
+     </head>
+     <body>
+
+          <!-- CHATBOT -->
+          <script type="text/javascript">
+               (function(d, t) {
+                   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                   v.onload = function() {
+                     window.voiceflow.chat.load({
+                       verify: { projectID: '64524b5cf4d85600071d2767' },
+                       url: 'https://general-runtime.voiceflow.com',
+                       versionID: 'production'
+                     });
+                   }
+                   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+               })(document, 'script');
+             </script>
+
+          <!-- Main Navigation -->
+          <nav class="main-nav" id="main-nav">
+               <div class="content-wrapper-sm">
+                    <a href="#" class="navbar-brand">SanApp+ Cliente</a>
+                    <div id="menu-button">
+                         <div class="bar1"></div>
+                         <div class="bar2"></div>
+                         <div class="bar3"></div>
+                    </div>
+                    <ul class="nav-links">
+                         <li><a href="#">Home</a></li>
+                         <li><a href="#reserve">Sobre</a></li>
+                         <li><a href="#contact">Informe</a></li>
+                    </ul>
+               </div>
+          </nav>
+
+          <!-- Main header -->
+          <header>
+               <div id="map"></div>
+          </header>
+
+          <!-- Main content -->
+          <main>
+
+               <div id="reserve" class="content-wrapper-lg text-center astonish" data-animation="zoomIn">
+                    <h2 class="section-title">SanAPP+ 📢 </h2>
+                              <p>+ Compreenda sua cidade</p>
+                              <p>+ Colabore com seu bairro</p>
+                              <p>+ Seja participativo</p>
+                    <a href="#" class="btn btn-outline-purple">WEBMAP</a>
+               </div>
+
+               <div class="content-wrapper" id="contact">
+                    <!-- Third replaceble image -->
+                    <img class="img-absolute" src="img/pipe_g.jpg" alt="City 3">
+
+                    <!-- Custom form, important note: you will need additional code in order to make this form work -->
+                    <form class="contact-form astonish" action="#" method="post" data-animation="fadeInRight">
+                         <h2 class="section-title">Opção de contato por formulário:</h2>
+                         <div class="grid">
+                              <div class="grid-col-sm-12 grid-col-md-6">
+                                   <div class="form-group">
+                                        <input type="text" name="firstName" required>
+                                        <label for="firstName">Nome:</label>
+                                   </div>
+                              </div>
+                              <div class="grid-col-sm-12 grid-col-md-6">
+                                   <div class="form-group">
+                                        <input type="text" name="lastName" required>
+                                        <label for="lasttName">Sobrenome (opcional):</label>
+                                   </div>
+                              </div>
+                              <div class="grid-col-sm-12">
+                                   <div class="form-group">
+                                        <input type="text" name="email" required>
+                                        <label for="email">E-mail:</label>
+                                   </div>
+                              </div>
+                              <div class="grid-col-sm-12">
+                                   <div class="form-group">
+                                        <textarea name="message" required></textarea>
+                                        <label for="message">Local e referências:</label>
+                                   </div>
+                              </div>
+                              <div class="grid-col-sm-12">
+                                   <div class="form-group">
+                                       <textarea name="message" required></textarea>
+                                       <label for="message">Mensagem:</label>
+                                 </div>
+                              </div>
+                         </div>
+                         <input class="btn btn-outline-teal" type="submit" value="Enviar">
+                    </form>
+               </div>
+
+          </main>
+
+          <!-- Main footer -->
+          <footer>
+               <div class="content-wrapper-sm display-flex-between">
+                    <!-- Easily replaceble copyright information -->
+                    <small>SanAPP - Gestão de Ativos Sanitários 4.0.</small>
+          </footer>
+
+          <!-- Scripts placed at the bottom for faster loading -->
+          <script src="js/webmap.js"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+          <script src="js/menu.js" charset="utf-8"></script>
+
+          <!-- Optional js files -->
+          <!-- Quick note: if you remove astonish, make sure you remove the embedded styles in the top -->
+          <script src="js/astonish.js" charset="utf-8"></script>
+          <script src="js/nav.js" charset="utf-8"></script>
+          <script src="js/scroll.js" charset="utf-8"></script>
+     </body>
+</html>
